@@ -6,11 +6,21 @@ def word_crawler():
     except:
         return "File not found"
 
-    find_word = input("Enter the proper word want to find: ")
+    find_word = input("Enter the word: ")
 
     words = file.readlines()
 
-    word_lst = words[0].split(" ")
+    word_lst = []
+
+
+    for i in words:
+        i = i.split(" ")
+        for j in i:
+            if("\n" in j):
+                j = j[0:len(j)-1]
+                word_lst.append(j)
+            else:
+                word_lst.append(j)
 
     for word in word_lst:
         if(word == find_word):
