@@ -1,4 +1,4 @@
-Must install this packages 
+Must install this package
 
 pycryptodome
 
