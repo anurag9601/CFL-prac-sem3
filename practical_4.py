@@ -1,3 +1,25 @@
+#Simple way of code
+
+def find_word():
+    file_name = input("Enter proper file name: ")
+    try:
+        file = open(file_name)
+    except:
+        return "File not found"
+
+    word_to_find = input("Enter proper the word: ")
+
+    file_words = file.read()
+
+    if(word_to_find in file_words):
+        return f"{word_to_find} found in the file"
+    else:
+        return f"{word_to_find} not found in the file"
+
+print(find_word())
+
+#Code with quite complications
+
 def word_crawler():
     file_name = input("Enter the txt filename: ")
 
