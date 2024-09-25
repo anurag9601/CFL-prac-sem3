@@ -1,3 +1,5 @@
+# File opened log history
+
 import logging
 
 name = input("Enter your name: ")
